@@ -1,15 +1,32 @@
-SET    10    C1
-SET    1    C2
-ADD    C1    C2    C1
+SET    30    C1
 STR    0    C1
 MOV    C1    R0
-MOV    R0    C1
-MOV    C1    R0
-SET    10    C1
+SET    1    C1
+STR    1    C1
 MOV    C1    R1
-NEQ    R0    R1    L0
-MOV    R0    C1
+SET    20    C1
+STR    2    C1
+MOV    C1    R2
+MOV    R1    C1
 SET    1    C2
 ADD    C1    C2    C1
-STR    0    C1
-MOV    C1    R0
+MOV    C1    R2
+SET    10    C1
+MOV    C1    R3
+EQA    R2    R3    L0
+LAB    loopRestart
+MOV    R1    C1
+SET    1    C2
+ADD    C1    C2    C1
+STR    1    C1
+MOV    C1    R1
+JMP    loopRestart
+LAB    L0
+MOV    R1    C1
+SET    3    C2
+ADD    C1    C2    C1
+STR    3    C1
+MOV    C1    R3
+SET    3    C1
+STR    4    C1
+MOV    C1    R4
