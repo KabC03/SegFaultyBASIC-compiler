@@ -1,4 +1,9 @@
- 10
+
+LET z = 30
+LET x = 1
+LET w = 20
+
+IF x + 1 != 10
 LAB loopRestart
 LET x = x + 1
 GOTO loopRestart
