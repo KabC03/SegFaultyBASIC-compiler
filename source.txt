@@ -1,3 +1,9 @@
-LET x = 10 + 1
-IF x == 10
+ 10
+LAB loopRestart
 LET x = x + 1
+GOTO loopRestart
+END
+LET y = x + 3
+
+
+LET p = 3
